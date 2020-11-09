@@ -1,70 +1,35 @@
-###################
-What is CodeIgniter
-###################
+# ovni
+ovni는 웹 쇼핑몰에 기본적인 이해 및 AWS를 통해 직접 서버 운영을 하여 만들어본 사이트 입니다.
+도메인을 구매하여 DNS서버에 연동하였기에 www.ovni.co.kr로 접속 가능합니다.
 
-CodeIgniter is an Application Development Framework - a toolkit - for people
-who build web sites using PHP. Its goal is to enable you to develop projects
-much faster than you could if you were writing code from scratch, by providing
-a rich set of libraries for commonly needed tasks, as well as a simple
-interface and logical structure to access these libraries. CodeIgniter lets
-you creatively focus on your project by minimizing the amount of code needed
-for a given task.
+## 사용 기술
+* 언어 : PHP 7.4.9, vue.js, HTML, CSS
+* 운영체제 : Amazon Linux 2 AMI (HVM)
+* 데이터베이스 : MySQL 5.7
+* 웹 서버 : Apache/2.4.46
 
-*******************
-Release Information
-*******************
+## 주요 기능
+1. 회원가입 & 로그인 & 회원정보 수정 (구글, 네이버 로그인 API 연동)
+2. 상품 상세 페이지 보기
+3. 상품 결제 페이지 (Naver Pay API 연동)
 
-This repo contains in-development code for future releases. To download the
-latest stable release please visit the `CodeIgniter Downloads
-<https://codeigniter.com/download>`_ page.
+---
+### 회원가입 & 로그인 & 회원정보 수정 (구글, 네이버 로그인 API 연동)
+<img src="https://user-images.githubusercontent.com/49344118/57366009-19fabb80-71c1-11e9-971f-da61db308cb6.gif" height="400"><br>
+* 회원가입을 하면, 데이터베이스에 회원 정보가 저장됩니다.
+* 로그인 페이지에서 아이디 저장에 체크를 하는 경우, 다음번 로그인 시 아이디 입력란에 아이디가 나오게 했습니다.
+* 입력한 아이디, 패스워드와 데이터베이스에 저장된 계정 정보를 대조하여, 일치하는 경우에 로그인되고 그렇지 않으면 로그인이 되지 않습니다.
+* 로그인에 성공하면, 세션으로 로그인 정보를 저장합니다. 그리고 상단 바에는 '(이름)님 :)'이 나옵니다.
 
-**************************
-Changelog and New Features
-**************************
 
-You can find a list of all changes for each release in the `user
-guide change log <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/changelog.rst>`_.
+### 2. 상품 상세 페이지 보기
+<img src="https://user-images.githubusercontent.com/49344118/57366008-19fabb80-71c1-11e9-8437-f8a25d0fbbbb.gif" height="400"><br>
+* 상단 바에 Q&A를 클릭하게 되면, 질문을 등록할 수 있습니다.
+* 수정, 삭제는 자신이 쓴 글만 가능합니다.
+* 삭제는 등록 시에 입력받은 비밀번호가 일치하는 경우에만 삭제할 수 있게 했습니다.
 
-*******************
-Server Requirements
-*******************
 
-PHP version 5.6 or newer is recommended.
-
-It should work on 5.3.7 as well, but we strongly advise you NOT to run
-such old versions of PHP, because of potential security and performance
-issues, as well as missing features.
-
-************
-Installation
-************
-
-Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide.
-
-*******
-License
-*******
-
-Please see the `license
-agreement <https://github.com/bcit-ci/CodeIgniter/blob/develop/user_guide_src/source/license.rst>`_.
-
-*********
-Resources
-*********
-
--  `User Guide <https://codeigniter.com/docs>`_
--  `Language File Translations <https://github.com/bcit-ci/codeigniter3-translations>`_
--  `Community Forums <http://forum.codeigniter.com/>`_
--  `Community Wiki <https://github.com/bcit-ci/CodeIgniter/wiki>`_
--  `Community Slack Channel <https://codeigniterchat.slack.com>`_
-
-Report security issues to our `Security Panel <mailto:security@codeigniter.com>`_
-or via our `page on HackerOne <https://hackerone.com/codeigniter>`_, thank you.
-
-***************
-Acknowledgement
-***************
-
-The CodeIgniter team would like to thank EllisLab, all the
-contributors to the CodeIgniter project and you, the CodeIgniter user.
+### 3. 상품 결제 페이지 (Naver Pay API 연동)
+<img src="https://user-images.githubusercontent.com/49344118/57366007-19fabb80-71c1-11e9-8652-92634a186da3.gif" height="400"><br>
+* 상단 바에 각 카테고리를 클릭하면, 카테고리에 맞는 상품을 8개씩 볼 수 있습니다.
+* 상품 목록에서 상품 하나를 클릭하면, 클릭 된 상품에 대한 상세내용을 볼 수 있습니다.
