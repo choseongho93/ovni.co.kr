@@ -1,9 +1,11 @@
 # ovni
 ovni는 웹 쇼핑몰에 기본적인 이해 및 AWS를 통해 직접 서버 운영을 하여 만들어본 사이트 입니다.
-도메인을 구매하여 DNS서버에 연동하였기에 www.ovni.co.kr로 접속 가능합니다.
+도메인을 구매하여 DNS서버에 연동하여 도메인으로 접속 가능합니다.
+URL : www.ovni.co.kr
 
 ## 사용 기술
 * 언어 : PHP 7.4.9, vue.js, HTML, CSS
+* 프레임워크 : codeigniter 3 (CI)
 * 운영체제 : Amazon Linux 2 AMI (HVM)
 * 데이터베이스 : MySQL 5.7
 * 웹 서버 : Apache/2.4.46
